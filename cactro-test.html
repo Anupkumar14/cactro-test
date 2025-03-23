@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      .scroll-hide::-webkit-scrollbar {
+        display: none;
+      }
+      .scroll-hide::-webkit-scrollbar {
+        display: none;
+      }
+      @keyframes marquee {
+        0% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+      .animate-marquee {
+        display: flex;
+        gap: 2rem;
+        white-space: nowrap;
+        animation: marquee 10s linear infinite;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100">
+    <!-- Navbar -->
+    <nav
+      id="navbar"
+      class="fixed top-0 left-0 w-full bg-white shadow-md z-50 p-4 flex items-center justify-between transition-all"
+    >
+      <div class="flex items-center space-x-8">
+        <img
+          src="https://a.slack-edge.com/3d92b39/marketing/img/nav/slack-salesforce-logo-nav-black.png"
+          alt="Slack"
+          class="c-slacklogo--color py-1"
+        />
+        <ul class="flex space-x-4">
+          <li class="relative group">
+            <a href="#" class="hover:text-blue-500">Products</a>
+            <ul
+              class="absolute hidden bg-white shadow-md mt-2 py-2 w-32 group-hover:block"
+            >
+              <li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-200">List 1</a>
+              </li>
+              <li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-200">List 2</a>
+              </li>
+              <li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-200">List 3</a>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#" class="hover:text-blue-500">Enterpirse</a></li>
+          <li><a href="#" class="hover:text-blue-500">Resources</a></li>
+          <li><a href="#" class="hover:text-blue-500">Pricing</a></li>
+        </ul>
+      </div>
+      <div class="flex items-center space-x-4">
+        <button class="text-gray-600 hover:text-gray-900">🔍</button>
+        <button class="text-gray-600 hover:text-gray-900">Sign In</button>
+        <button
+          class="border-2 border-[rgb(77,21,74)] text-[rgb(77,21,74)] px-4 py-2 rounded"
+        >
+          TALK TO SALES
+        </button>
+        <button class="bg-[rgb(77,21,74)] px-4 py-2 rounded">
+          TRY FOR FREE
+        </button>
+      </div>
+    </nav>
+    <!-- Spacer Section -->
+    <div id="spacer" class="p-3"></div>
+    <!-- Message Bar -->
+    <div
+      id="messageBar"
+      class="bg-[rgb(0,99,159)] text-white text-center py-4 px-6 mt-14 relative rounded-full transition-all"
+    >
+      <span>Welcome to our website! Explore new features.</span>
+      <button onclick="hideMessageBar()" class="absolute right-4 top-2">
+        ✖
+      </button>
+    </div>
+
+    <!-- Carousel Section -->
+    <section class="container mx-auto mt-10 px-4">
+      <div class="flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2">
+          <h1 class="text-4xl font-bold">Slack is where the future works</h1>
+          <p class="mt-4">
+            Transform the way you work with one place for everything and
+            everything you need to get the stuff done.
+          </p>
+          <div class="mt-6 flex space-x-4">
+            <button class="bg-[rgb(77,21,74)] text-white px-6 py-3 rounded">
+              Try for Free
+            </button>
+            <button
+              class="border-2 border-gray-300 px-6 py-3 rounded flex items-center space-x-2"
+            >
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/d/dc/Google-g-icon.png"
+                alt="Google"
+                class="w-5 h-5"
+              />
+              <span>SIGN UP WITH GOOGLE</span>
+            </button>
+          </div>
+        </div>
+        <div class="md:w-1/2 mt-6 md:mt-0">
+          <img src="https://loremflickr.com/500/300" alt="Placeholder" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Moving Slider -->
+    <div class="overflow-hidden mt-10 py-4 bg-gray-200 flex justify-center">
+      <div class="flex space-x-10 animate-marquee w-full max-w-5xl">
+        <img src="https://loremflickr.com/50/50" alt="Placeholder" />
+        <img src="https://loremflickr.com/50/50" alt="Placeholder" />
+        <img src="https://loremflickr.com/50/50" alt="Placeholder" />
+        <img src="https://loremflickr.com/50/50" alt="Placeholder" />
+        <img src="https://loremflickr.com/50/50" alt="Placeholder" />
+        <img src="https://loremflickr.com/50/50" alt="Placeholder" />
+        <img src="https://loremflickr.com/50/50" alt="Placeholder" />
+      </div>
+    </div>
+
+    <!-- Video Section -->
+    <section
+      class="container mx-auto mt-10 px-4 flex flex-col md:flex-row items-center bg-orange-100 p-6 rounded-lg"
+    >
+      <div class="md:w-1/2 cursor-pointer" onclick="openVideo()">
+        <img
+          src="https://img.youtube.com/vi/T18nDNllajs/0.jpg"
+          alt="Video Thumbnail"
+          class="rounded-lg shadow-lg"
+        />
+      </div>
+      <div class="md:w-1/2 p-6">
+        <h2 class="text-3xl font-bold text-gray-900">
+          Ready to start 2025 with a detailed React Roadmap?
+        </h2>
+        <p class="mt-4 text-gray-700">
+          Then watch the video where I break down my proven 13-section approach
+          to becoming a job-ready web developer in 2025. This isn't just another
+          theoretical roadmap - it's based on years of teaching experience and
+          seeing hundreds of students succeed. I share exactly what to learn,
+          when to learn it, and most importantly, what projects to build at each
+          stage.
+        </p>
+      </div>
+    </section>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="video-container flex">
+      <span class="close-btn" onclick="closeVideo()">&times;</span>
+      <iframe id="videoFrame" src="" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <!-- Chat Widget -->
+    <div class="fixed bottom-20 right-5">
+      <button
+        onclick="toggleChat()"
+        class="bg-red-500 text-white p-3 rounded-full shadow-lg"
+      >
+        💬
+      </button>
+      <div
+        id="chatBox"
+        class="hidden bg-white p-4 rounded shadow-lg w-64 absolute bottom-12 right-0"
+      >
+        <p>Hey There! Want to know something cool.</p>
+        <button onclick="toggleChat()" class="mt-2 text-red-500">Close</button>
+      </div>
+    </div>
+
+    <!-- Cookies Notification -->
+    <div
+      id="cookieConsent"
+      class="fixed bottom-5 right-5 bg-white p-4 shadow-lg rounded-md flex flex-col space-y-3"
+    >
+      <p>
+        We use cookies to improve your experience. By continuing, you accept our
+        cookie policy.
+      </p>
+      <div class="flex space-x-4">
+        <button
+          onclick="acceptCookies()"
+          class="bg-green-500 text-white px-4 py-2 rounded"
+        >
+          Accept
+        </button>
+        <button
+          onclick="declineCookies()"
+          class="border border-gray-300 px-4 py-2 rounded"
+        >
+          Decline
+        </button>
+      </div>
+    </div>
+
+    <script>
+      function hideMessageBar() {
+        document.getElementById("messageBar").style.display = "none";
+        document.getElementById("navbar").classList.remove("mt-14");
+      }
+
+      function toggleChat() {
+        var chatBox = document.getElementById("chatBox");
+        chatBox.classList.toggle("hidden");
+      }
+
+      function acceptCookies() {
+        document.getElementById("cookieConsent").style.display = "none";
+      }
+
+      function declineCookies() {
+        document.getElementById("cookieConsent").style.display = "none";
+      }
+
+      function openVideo() {
+        document.getElementById("videoFrame").src =
+          "https://www.youtube.com/embed/T18nDNllajs?si=gNiNoBhjIrMpGpFi";
+        document.getElementById("videoModal").style.display = "flex";
+      }
+
+      function closeVideo() {
+        document.getElementById("videoModal").style.display = "none";
+        document.getElementById("videoFrame").src = "";
+      }
+    </script>
+  </body>
+</html>
